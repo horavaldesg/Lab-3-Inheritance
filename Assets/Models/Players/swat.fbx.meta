@@ -6,7 +6,37 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soldier_Body_diffuse
+    second: {fileID: 2800000, guid: 292dcd77478bd4293a642dcc31cf6889, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soldier_Body_normal
+    second: {fileID: 2800000, guid: 61a76da62cc87474db27aeef1be2ca93, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soldier_Body_specular
+    second: {fileID: 2800000, guid: a9f480d84defd414f96acedc5ca4272d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soldier_head_diffuse
+    second: {fileID: 2800000, guid: 43c6faf0038044949aa75e0b45257c7d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soldier_head_normal
+    second: {fileID: 2800000, guid: 05fc67ba28cf94ce382f65b23e08ea5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soldier_head_specular
+    second: {fileID: 2800000, guid: 53603e7dd28184549a8572db1cdee32a, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

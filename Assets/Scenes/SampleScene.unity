@@ -358,10 +358,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6596629675466879577, guid: 36b47babd37184f9b90dcfa180f502c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.31430474
+      objectReference: {fileID: 0}
+    - target: {fileID: -6596629675466879577, guid: 36b47babd37184f9b90dcfa180f502c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.26528373
+      objectReference: {fileID: 0}
+    - target: {fileID: -6596629675466879577, guid: 36b47babd37184f9b90dcfa180f502c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 16.752174
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 36b47babd37184f9b90dcfa180f502c6,
         type: 3}
       propertyPath: m_Name
       value: Weapon Chest Animated
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918753458281921464, guid: 36b47babd37184f9b90dcfa180f502c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 7.3344685e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918753458281921464, guid: 36b47babd37184f9b90dcfa180f502c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918753458281921464, guid: 36b47babd37184f9b90dcfa180f502c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -17.888609
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b47babd37184f9b90dcfa180f502c6, type: 3}
@@ -381,7 +411,7 @@ Animator:
   m_GameObject: {fileID: 1852153360}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39d953d571d794c83802bbb84928c74a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -390,3 +420,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1852153362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852153360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a52d5b2ed9f4c4a89285c9e2bc2620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

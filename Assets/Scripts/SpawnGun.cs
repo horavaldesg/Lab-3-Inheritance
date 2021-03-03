@@ -7,7 +7,7 @@ public class SpawnGun : MonoBehaviour
     public GameObject[] weapons;
     public Transform gunContainer;
     bool spawned;
-    GameObject weapon;
+    public static GameObject weapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,7 @@ public class SpawnGun : MonoBehaviour
         spawned = true;
         int i = Random.Range(0, weapons.Length - 1);
         weapon = Instantiate(weapons[i]);
+       
 
 
 

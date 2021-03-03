@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 7e1e5781d39549148abcbf66c428df00, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -387,7 +387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &529518193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &654050758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -751,6 +751,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846468259}
   m_CullTransparentMesh: 0
+--- !u!1 &938649227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5893816000031024685, guid: c83a32c98631845cf9401444a8bf4643,
+    type: 3}
+  m_PrefabInstance: {fileID: 5792981196494438085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &938649229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938649227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 1.59, z: 0.2}
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &938649230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938649227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c503d42cc144a1aa8c65e9248b11a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  speed: 0
+  damage: 0
+  text: {fileID: 1117624122}
 --- !u!20 &963194227 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 963194227, guid: c83a32c98631845cf9401444a8bf4643,
@@ -926,7 +961,7 @@ GameObject:
   - component: {fileID: 988399823}
   m_Layer: 0
   m_Name: Zombie Spawner 2
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1048,7 +1083,7 @@ GameObject:
   - component: {fileID: 1094305743}
   m_Layer: 0
   m_Name: Zombie Spawner 4
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1095,6 +1130,7 @@ GameObject:
   - component: {fileID: 1117624121}
   - component: {fileID: 1117624123}
   - component: {fileID: 1117624122}
+  - component: {fileID: 1117624124}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -1219,6 +1255,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117624120}
   m_CullTransparentMesh: 0
+--- !u!114 &1117624124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117624120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e98e9bbd4bb14758a658744b70cb7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 150
+  speed: 0
+  damage: 0
 --- !u!1 &1241800605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1482,7 @@ GameObject:
   - component: {fileID: 1499830016}
   m_Layer: 0
   m_Name: Zombie Spawner 1
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2037,7 +2088,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 36b47babd37184f9b90dcfa180f502c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.8
+      value: -11.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36b47babd37184f9b90dcfa180f502c6,
         type: 3}
@@ -2544,6 +2595,7 @@ GameObject:
   - component: {fileID: 2033436913}
   - component: {fileID: 2033436915}
   - component: {fileID: 2033436914}
+  - component: {fileID: 2033436916}
   m_Layer: 5
   m_Name: Round
   m_TagString: Untagged
@@ -2565,8 +2617,8 @@ RectTransform:
   m_Father: {fileID: 1570246364}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.44, y: 0.94}
-  m_AnchorMax: {x: 0.56, y: 0.99}
+  m_AnchorMin: {x: 0.45277086, y: 0.85600007}
+  m_AnchorMax: {x: 0.55552083, y: 0.99}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
@@ -2589,17 +2641,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Round Number
+  m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 82e2463a0b636417abb79380d01afaa2, type: 2}
+  m_sharedMaterial: {fileID: 9129982182367147137, guid: 82e2463a0b636417abb79380d01afaa2,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190294
+  m_fontColor: {r: 0.8396226, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2616,7 +2669,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.75
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2666,6 +2719,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033436912}
   m_CullTransparentMesh: 0
+--- !u!114 &2033436916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033436912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4046c1e1a1eb4c5d8b8dd6e45257a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2080640303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,7 +2743,7 @@ GameObject:
   - component: {fileID: 2080640305}
   m_Layer: 0
   m_Name: Zombie Spawner 3
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3250,6 +3315,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.0000032232251
       objectReference: {fileID: 0}
+    - target: {fileID: 5893816000031024685, guid: c83a32c98631845cf9401444a8bf4643,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5975117215320679526, guid: c83a32c98631845cf9401444a8bf4643,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3439,6 +3509,16 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185643253691026529, guid: c83a32c98631845cf9401444a8bf4643,
+        type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185643253691026529, guid: c83a32c98631845cf9401444a8bf4643,
+        type: 3}
+      propertyPath: health
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7185643253691026529, guid: c83a32c98631845cf9401444a8bf4643,
         type: 3}

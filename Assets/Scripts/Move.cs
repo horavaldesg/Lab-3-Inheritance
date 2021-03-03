@@ -6,7 +6,7 @@ public class Move : Player
 {
     Animator anim;
     public Transform camTransform;
-    public Transform gunContainer;
+    //public Transform gunContainer;
     public GameObject spawnGun;
     public TextMeshProUGUI interact;
     GameObject gun;
@@ -15,7 +15,7 @@ public class Move : Player
     void Start()
     {
         anim = GetComponent<Animator>();
-        gun = GameObject.FindGameObjectWithTag("Gun");
+        
     }
 
     // Update is called once per frame
@@ -35,11 +35,11 @@ public class Move : Player
         
         transform.position += new Vector3(movement.x, 0, movement.z);
 
-      
-            RaycastHit hit;
-            if (Physics.Raycast(camTransform.position , camTransform.transform.forward , out hit, 2))
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 2))
             {
-            if (!hit.collider.GetComponent<Zombie>())
+            if (!hit.collider.CompareTag("Zombies") || !hit.collider.CompareTag("Player"))
             {
 
 
@@ -53,44 +53,67 @@ public class Move : Player
                         
                         spwn.GetWeapon();
                         spawnGun.GetComponent<SpawnGun>().HoldWeapon();
-                        
+                        gun = GameObject.FindGameObjectWithTag("Gun");
+                        damage = gun.GetComponent<Gun>().damage;
+
+
                     }
 
                 }
-                if (hit.collider.CompareTag("Gun"))
-                {
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-
-                        hit.collider.gameObject.transform.position = gunContainer.position;
-                        hit.collider.gameObject.transform.rotation = gunContainer.rotation;
-                        damage = gun.GetComponent<Gun>().damage;
-                        Debug.Log(damage);
-                    }
+                //if (hit.collider.CompareTag("Gun"))
+                //{
+                //    if (Input.GetKeyDown(KeyCode.E))
+                //    {
+                //        //hit.collider.gameObject.transform.position = gunContainer.position;
+                //        //hit.collider.gameObject.transform.rotation = gunContainer.rotation;
+                //        damage = gun.GetComponent<Gun>().damage;
+                //        //damage = SpawnGun.weapon.GetComponent<Gun>().damage;
+                //        Debug.Log(damage);
+                //    }
 
                     
-                }
-            }
-            RaycastHit shootRay;
-            if (Physics.Raycast(camTransform.position, camTransform.transform.forward, out shootRay, Mathf.Infinity))
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    if (shootRay.collider.GetComponent<Zombie>())
-                    {
-                       
-                        shootRay.collider.GetComponent<Zombie>().takeDamage(damage);
-                    }
-                }
+                //}
+                interact.enabled = false;
                 
-            }
-        }
-        else
-        {
-            interact.enabled = false;
-        }
+                   
+                   
+                    
+                }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    Debug.Log("Mouse Down");
+            //    if (hit.collider.GetComponent<Zombie>())
+            //    {
+            //        Debug.Log("Second Zombie Collision");
 
-            Debug.DrawRay(camTransform.position , camTransform. transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+
+            //        hit.collider.GetComponent<Zombie>().takeDamage(damage);
+            //    }
+            //}
+           
+               
+                
+                
+            
+        }
+        RaycastHit shootRay;
+        if (Physics.Raycast(camTransform.position, camTransform.transform.forward, out shootRay, Mathf.Infinity))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (shootRay.collider.GetComponent<Zombie>())
+                {
+
+                    shootRay.collider.GetComponent<Zombie>().takeDamage(damage);
+                }
+            }
+
+        }
+    
+
+
+
+    Debug.DrawRay(camTransform.position , camTransform. transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
 
         
     }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Box
   - Gun
+  - Enemy
+  - Zombies
+  - Spawner
   layers:
   - Default
   - TransparentFX

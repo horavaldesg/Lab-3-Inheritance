@@ -8,6 +8,7 @@ public class Zombie : Player
     Transform target;
     float minDistance = 1;
     Animator anim;
+    
     public override void setHealth()
     {
         this.health = Random.Range(50, 150);
@@ -16,7 +17,7 @@ public class Zombie : Player
     }
     public override void setDamage()
     {
-        this.damage = Random.Range(20, 30);
+        this.damage = Random.Range(15, 20);
         base.setDamage();
     }
     private void Start()
@@ -48,5 +49,22 @@ public class Zombie : Player
 
             Destroy(gameObject);
         }
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.transform.forward, out hit, 2))
+        {
+
+            if (hit.collider.CompareTag("Player"))
+            {
+                anim.SetBool("Attack", true);
+            }
+            else
+            {
+                anim.SetBool("Attack", false);
+            }
+
+
+        }
+        Debug.DrawRay(transform.position, transform.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+
     }
 }

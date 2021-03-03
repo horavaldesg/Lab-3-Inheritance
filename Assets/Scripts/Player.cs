@@ -6,7 +6,7 @@ public class Player: MonoBehaviour
     public float health;
     public float speed;
     public float damage;
-    public float takeDamage(float damage) { return this.health = this.health - damage; }
+    public float takeDamage(float takenDamage) { return this.health = this.health - takenDamage; }
 
     public bool isAlive()
     {
@@ -19,16 +19,22 @@ public class Player: MonoBehaviour
             return true;
         }
     }
-    public virtual void setHealth()
-    {
-        //Debug.Log(this.health);
+    public float getHealth() { return this.health; }
+    public virtual void setHealth() {
     }
+    
    public virtual void setDamage()
     {
 
     }
+    private void Update()
+    {
+        if(this.health < 0)
+        {
+            Debug.Log("Game Over");
+        }
+    }
 
-    
 
 
 }

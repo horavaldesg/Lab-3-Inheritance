@@ -1,29 +1,35 @@
-﻿
-public class Player
+﻿using UnityEngine;
+using System.Collections;
+
+public class Player: MonoBehaviour
 {
-    private string playerName;
-    private double playerHealth;
-    private double playerDamage;
-    private double playerStrength;
-    //public Player(string name, double playerHealth, double playerDamage, double playerStrength)
-    //{
-    //    this.playerName = name;
-    //    this.playerHealth = playerHealth;
-    //    this.playerDamage = playerDamage;
-    //    this.playerStrength = playerStrength;
-    //}
+    public float health;
+    public float damage;
 
-    public double getHealth() { return this.playerHealth; }
-    public double getStrength() { return this.playerStrength; }
-    public string getName() { return this.playerName; }
+    public float takeDamage(float damage) { return this.health = this.health - damage; }
+    public float giveDamage() { return this.damage; }
 
-    public double setHealth(double health) { return this.playerHealth = health; }
-    public string setName(string name) { return this.playerName = name; }
+    public bool isAlive()
+    {
+        if (health < 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    public virtual void setHealth()
+    {
+        Debug.Log(this.health);
+    }
+   public virtual void setDamage()
+    {
 
-    public double attack() { return 0; }
-    public double takeDamage(double damage) { return this.playerHealth = this.playerHealth - damage;   }
+    }
 
-
-
+  
+  
 
 }

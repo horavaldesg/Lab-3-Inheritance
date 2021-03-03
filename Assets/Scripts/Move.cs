@@ -42,15 +42,16 @@ public class Move : Player
         RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 2))
             {
-            if (!hit.collider.CompareTag("Zombies") || !hit.collider.CompareTag("Player"))
-            {
+            //if (!hit.collider.CompareTag("Zombies") || !hit.collider.CompareTag("Player"))
+            //{
 
 
-                interact.enabled = true;
+                
                 InventorySpawner spwn = hit.transform.GetComponent<InventorySpawner>();
                 
                 if (hit.collider.CompareTag("Box"))
                 {
+                    interact.enabled = true;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         
@@ -63,6 +64,7 @@ public class Move : Player
                     }
 
                 }
+           
                 //if (hit.collider.CompareTag("Gun"))
                 //{
                 //    if (Input.GetKeyDown(KeyCode.E))
@@ -76,12 +78,12 @@ public class Move : Player
 
                     
                 //}
-                interact.enabled = false;
+               
                 
                    
                    
                     
-                }
+                //}
             //if (Input.GetMouseButtonDown(0))
             //{
             //    Debug.Log("Mouse Down");
@@ -98,6 +100,10 @@ public class Move : Player
                 
                 
             
+        }
+        else
+        {
+            interact.enabled = false;
         }
         RaycastHit shootRay;
         if (Physics.Raycast(camTransform.position, camTransform.transform.forward, out shootRay, Mathf.Infinity))

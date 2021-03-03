@@ -5,6 +5,7 @@ public class Gun : MonoBehaviour
 {
     public string name;
     public int ammoSize;
+    public int ammo;
     public float damage;
     // Use this for initialization
     void Start()
@@ -22,6 +23,6 @@ public class Gun : MonoBehaviour
     }
     public void Shoot()
     {
-
+        
     }
 }

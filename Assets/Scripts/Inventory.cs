@@ -4,6 +4,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject[] weapons;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,4 +15,5 @@ public class Inventory : MonoBehaviour
     {
         
     }
+   
 }

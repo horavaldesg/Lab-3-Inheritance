@@ -25,10 +25,7 @@ public class InventorySpawner : Inventory
     {
         Debug.Log("Get Weapon");
 
-        int i = Random.Range(0,weapons.Length - 1);
-        GameObject weapon = Instantiate(weapons[i]);
-        
-            weapon.transform.position = pos; 
+       
         
         anim.Play("Take 001");
     }

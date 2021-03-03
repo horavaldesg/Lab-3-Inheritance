@@ -4,10 +4,9 @@ using System.Collections;
 public class Player: MonoBehaviour
 {
     public float health;
-    public float damage;
     public float speed;
+    public float damage;
     public float takeDamage(float damage) { return this.health = this.health - damage; }
-    public float giveDamage() { return this.damage; }
 
     public bool isAlive()
     {
@@ -22,7 +21,7 @@ public class Player: MonoBehaviour
     }
     public virtual void setHealth()
     {
-        Debug.Log(this.health);
+        //Debug.Log(this.health);
     }
    public virtual void setDamage()
     {

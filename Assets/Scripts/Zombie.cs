@@ -7,6 +7,7 @@ public class Zombie : Player
     NavMeshAgent agent;
     Transform target;
     float minDistance = 1;
+    Animator anim;
     public override void setHealth()
     {
         this.health = Random.Range(50, 150);
@@ -20,7 +21,9 @@ public class Zombie : Player
     }
     private void Start()
     {
+        anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
         setHealth();
         setDamage();
     }
@@ -31,12 +34,19 @@ public class Zombie : Player
         Vector3 differenceVector = target.position - transform.position;
         if(differenceVector.magnitude > minDistance)
         {
-            transform.position = target.transform.position.normalized;
+           agent.destination = target.transform.position;
+            anim.SetFloat("Speed", agent.speed);
 
         }
-        //else
-        //{
-        //    agent.destination = agent.transform.position;
-        //}
+        else
+        {
+            anim.SetFloat("Speed", agent.speed);
+            agent.destination = agent.transform.position;
+        }
+        if (health <= 0)
+        {
+
+            Destroy(gameObject);
+        }
     }
 }

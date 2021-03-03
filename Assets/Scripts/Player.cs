@@ -5,7 +5,7 @@ public class Player: MonoBehaviour
 {
     public float health;
     public float damage;
-
+    public float speed;
     public float takeDamage(float damage) { return this.health = this.health - damage; }
     public float giveDamage() { return this.damage; }
 
@@ -29,7 +29,7 @@ public class Player: MonoBehaviour
 
     }
 
-  
-  
+    
+
 
 }

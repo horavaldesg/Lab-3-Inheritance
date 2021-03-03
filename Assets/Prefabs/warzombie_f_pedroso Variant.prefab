@@ -14,6 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   damage: 30
+  speed: 0
+--- !u!195 &1016992628045266989
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6942795747214218533}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.6
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &7825191421748897908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 829b4071a9a0349e3b5c4b77f10eaae6,
         type: 3}
       propertyPath: m_Name
-      value: warzombie_f_pedroso
+      value: warzombie_f_pedroso Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 829b4071a9a0349e3b5c4b77f10eaae6, type: 3}

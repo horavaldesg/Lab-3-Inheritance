@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GunName : TextScript
 {
+    public static string gunName;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class GunName : TextScript
     // Update is called once per frame
     void Update()
     {
-        text.SetText(name);
+        text.SetText(gunName);
     }
 }

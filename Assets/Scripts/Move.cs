@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
 public class Move : Player
 {
     Animator anim;
@@ -22,6 +23,7 @@ public class Move : Player
     void Update()
     {
         
+
         Vector3 movement = Vector3.zero;
         float zInput = Input.GetAxisRaw("Horizontal");
         float xInput = Input.GetAxisRaw("Vertical");
@@ -32,7 +34,8 @@ public class Move : Player
         movement += transform.forward * zSpeed;
         anim.SetFloat("Speed", xInput);
         anim.SetFloat("ZSpeed", zInput);
-        
+
+
         transform.position += new Vector3(movement.x, 0, movement.z);
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);

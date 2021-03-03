@@ -5,6 +5,7 @@ using TMPro;
 public class TextScript : Gun
 {
     public TextMeshProUGUI text;
+    string gunName;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class TextScript : Gun
     // Update is called once per frame
     void Update()
     {
-        
+        gunName = getName();
+        GunName.gunName = gunName;
     }
 }

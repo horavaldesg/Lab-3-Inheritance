@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
     public int ammoSize;
     public int ammo;
     public float damage;
+
+    public string getName() { return name; }
     // Use this for initialization
     void Start()
     {

@@ -46,7 +46,7 @@ public class Zombie : Player
         }
         if (health <= 0)
         {
-
+            ScoreText.score += 100;
             Destroy(gameObject);
         }
         RaycastHit hit;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player: MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Player: MonoBehaviour
     {
         if(this.health < 0)
         {
+            SceneManager.LoadScene("GameOver");
             Debug.Log("Game Over");
         }
     }
